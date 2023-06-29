@@ -45,15 +45,17 @@ const Chart = ({ chart, setChart, userLogin, history, setHistory }) => {
     });
 
   // ** Delete Chart By Id
-  const handleDelete = (idx) => {
+  const handleDelete = (id) => {
     Swal.fire({
       title: "Barang Berhasil di Hapus",
       background: "#1E1E1E",
       color: "#FFFFFF",
     });
 
-    setChart(chart.filter((_, index) => index !== idx));
+    setChart(chart.filter((ch, index) => ch.random_id !== id));
   };
+
+  console.log(chart);
 
   // ** Mencari tanggal saati ini
   const tanggalSekarang = new Date().toDateString();
@@ -121,7 +123,7 @@ const Chart = ({ chart, setChart, userLogin, history, setHistory }) => {
 
             <div className="sub-sec-chart">
               <h3
-                onClick={() => handleDelete(idx)}
+                onClick={() => handleDelete(ch.random_id)}
                 style={{ marginRight: 20, cursor: "pointer" }}
               >
                 Hapus
