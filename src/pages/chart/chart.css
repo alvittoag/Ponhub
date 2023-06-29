@@ -1,0 +1,84 @@
+.container-chart {
+  padding: 40px 120px;
+}
+
+.btn-back-chart {
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.sub-container-chart {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.container-main-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desc-product {
+  font-size: 18px;
+  max-width: 350px;
+}
+
+.sub-main-chart {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 30px;
+}
+
+.container-desc-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sub-sec-chart {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+.input-chart {
+  max-width: 70px;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  font-size: 17px;
+}
+
+.count-chart {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.container-checkout {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: end;
+  color: white;
+}
+
+.btn-checkout {
+  padding: 30px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 15px;
+
+  cursor: pointer;
+}

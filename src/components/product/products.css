@@ -1,0 +1,67 @@
+.container-products{
+  color: white;
+  margin-top: 60px;
+  padding: 40px 120px;
+}
+
+
+.title-products {
+  text-align: center;
+  font-size: 45px;
+}
+
+.container-filter {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.active-filter {
+  border-bottom: 5px solid white;
+  color: white ;
+  cursor: pointer;
+}
+
+.inactive-filter {
+  color: gray;
+  cursor: pointer;
+}
+
+.container-main-product {
+margin-top: 50px;
+display: grid;
+grid-template-columns: auto auto auto;
+justify-content: space-between;
+gap: 50px;
+}
+
+
+.container-perProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.title-product {
+  margin-top: 20px;
+}
+
+.desc-product {
+  font-size: 18px ;
+  max-width: 350px;
+}
+
+.content-product{
+  display: flex;
+  gap: 20px;
+}
+
+.button-addchart {
+  color: white;
+  border: 1px solid gray;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+}

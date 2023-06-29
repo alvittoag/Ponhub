@@ -1,0 +1,23 @@
+.container-service {
+  margin-top: 190px;
+  padding: 50px 120px;
+  background-color: rgb(43, 42, 42);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  color: white;
+  border-top: 1px solid gray;
+}
+
+.title-service {
+  background-color: rgb(43, 42, 42);
+  font-size: 24px;
+}
+
+.sub-service {
+  background-color: rgb(43, 42, 42);
+  font-size: 24px;
+  
+}

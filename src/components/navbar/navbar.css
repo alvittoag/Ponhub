@@ -1,0 +1,42 @@
+.container {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 120px;
+}
+
+.left-navbar {
+  display:  flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.container-item-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-login {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 13px 30px;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+.button-chart{
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 13px 50px;
+  border: none;
+  cursor:pointer;
+  text-decoration: none;
+}

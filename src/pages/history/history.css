@@ -1,0 +1,39 @@
+.container-history {
+  padding: 40px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin-bottom: 30px;
+}
+
+.container-content-history {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  align-items: center;
+  color: white;
+}
+
+.container-maincontent-history {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.desc-history {
+  max-width: 350px;
+}
+
+.container-sec-history {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.container-info-history {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

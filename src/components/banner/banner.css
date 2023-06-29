@@ -1,0 +1,16 @@
+.container-banner {
+  color: white;
+  padding: 70px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-banner {
+  font-size: 75px;
+}
+
+.sub-banner {
+  font-size: 25px;
+  margin-top: 20px;
+}
