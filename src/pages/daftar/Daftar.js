@@ -114,7 +114,7 @@ const Daftar = ({ user, setUser }) => {
 
         <div className="container-button-login">
           <button className="button-login">Daftar</button>
-          <p>
+          <p className="text-daftar-1">
             Sudah punya akun ?{" "}
             <Link to="/login" className="text-daftar">
               Login

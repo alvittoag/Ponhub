@@ -15,6 +15,7 @@ import product7 from "./products/product7.svg";
 import product8 from "./products/product8.svg";
 
 // ** Export Gambar
+// eslint-disable-next-line
 export default {
   logo,
   banner,

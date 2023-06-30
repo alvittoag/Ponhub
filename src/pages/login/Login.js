@@ -33,12 +33,11 @@ const Login = ({ user, setTokenLogin, setuserLogin }) => {
     // ** Supaya Tidak Refresh Halamannya
     e.preventDefault();
 
-    console.log(user);
-
     // ** Ketika data user kosong
-    user.length === 0 && alert("Email atau Password Salah");
+    user.length === 0 && setError("* Email atau Password Salah");
 
     // ** Method find untuk mencari email dan password yang sama
+    // eslint-disable-next-line
     user.find((us) => {
       if (us.email === input.email && us.password === input.password) {
         Swal.fire({
@@ -56,7 +55,7 @@ const Login = ({ user, setTokenLogin, setuserLogin }) => {
 
         // ** Melakukan perpindahan halaman
         navigate("/");
-      } else if (us.email !== input.email && us.password !== input.password) {
+      } else {
         // ** Set error ketika tidak sesuai
         setError("* Email atau Password Salah");
       }

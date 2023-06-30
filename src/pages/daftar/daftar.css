@@ -58,4 +58,9 @@
   text-decoration: none;
   text-decoration: underline;
   cursor: pointer;
+  font-size: 18px;
+}
+
+.text-daftar-1 {
+  font-size: 18px;
 }
