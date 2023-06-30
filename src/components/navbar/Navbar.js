@@ -1,6 +1,11 @@
 // ** Import Gambar
 import assets from "../../assets/assets";
 
+// * Import Icons
+import { AiOutlineShoppingCart, AiOutlineLogin } from "react-icons/ai";
+import { CgShoppingBag } from "react-icons/cg";
+import { FiLogOut } from "react-icons/fi";
+
 // ** Import React Router
 import { Link, useNavigate } from "react-router-dom";
 
@@ -42,6 +47,9 @@ const Navbar = ({ tokenLogin, setTokenLogin, chart, userLogin }) => {
         {/* Ketika user login tombol login dihilangkan  */}
         {!tokenLogin && (
           <Link to="/login" className="btn-login">
+            <AiOutlineLogin
+              style={{ backgroundColor: "#1E1E1E", fontSize: 24 }}
+            />
             Login
           </Link>
         )}
@@ -50,14 +58,21 @@ const Navbar = ({ tokenLogin, setTokenLogin, chart, userLogin }) => {
         {tokenLogin && (
           <>
             <Link to="/history-pembelian" className="button-chart">
+              <CgShoppingBag
+                style={{ backgroundColor: "white", fontSize: 26 }}
+              />
               History Pembelian
             </Link>
 
             <Link to="/chart" className="button-chart">
-              {cariKeranjangUser.length} Chart
+              <AiOutlineShoppingCart
+                style={{ backgroundColor: "white", fontSize: 26 }}
+              />
+              {cariKeranjangUser.length}
             </Link>
 
             <button onClick={handleLogout} className="btn-login">
+              <FiLogOut style={{ backgroundColor: "#1E1E1E", fontSize: 24 }} />
               Logout
             </button>
           </>

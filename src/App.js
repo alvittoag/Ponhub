@@ -78,7 +78,13 @@ const App = () => {
 
           <Route
             path="/history-pembelian"
-            element={<History history={history} userLogin={userLogin} />}
+            element={
+              <History
+                history={history}
+                userLogin={userLogin}
+                setHistory={setHistory}
+              />
+            }
           />
         </Route>
       </Routes>

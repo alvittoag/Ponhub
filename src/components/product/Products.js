@@ -1,6 +1,9 @@
 // ** Import Data
 import { products } from "../../data/products";
 
+// ** Import Icons
+import { MdAddShoppingCart } from "react-icons/md";
+
 // ** Import Library Sweet Alert
 import Swal from "sweetalert2";
 
@@ -13,6 +16,7 @@ const Products = ({ setChart, userLogin }) => {
   const [filter, setFilter] = useState("All");
 
   // ** Mencari produk berdasarkan filter
+  // eslint-disable-next-line
   const filterProduct = products.filter((product) => {
     if (filter === "All") {
       return product;
@@ -99,6 +103,7 @@ const Products = ({ setChart, userLogin }) => {
               onClick={() => handleAddChart(product)}
               className="button-addchart"
             >
+              <MdAddShoppingCart style={{ fontSize: 24 }} />
               Tambahkan Ke Chart
             </button>
           </div>

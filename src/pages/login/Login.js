@@ -20,14 +20,14 @@ const Login = ({ user, setTokenLogin, setuserLogin }) => {
   // ** State untuk set error ketika login
   const [error, setError] = useState("");
 
+  const navigate = useNavigate();
+
   // ** Function untuk memasukan setiap input ke object nya masing-masing
   const handleInput = (e) => {
     setInput({ ...input, [e.target.name]: e.target.value });
 
     setError("");
   };
-
-  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     // ** Supaya Tidak Refresh Halamannya

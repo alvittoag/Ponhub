@@ -1,6 +1,9 @@
 // ** Import React Router
 import { Link, useNavigate } from "react-router-dom";
 
+// ** Import Icons
+import { BiArrowBack } from "react-icons/bi";
+
 // ** Import CSS
 import "./chart.css";
 
@@ -28,7 +31,8 @@ const Chart = ({ chart, setChart, userLogin, history, setHistory }) => {
       >
         <h1>Anda belum memilki barang di keranjang</h1>
 
-        <Link to="/" className="btn-back-chart">
+        <Link to="/" className="btn-back-chart-notfound">
+          <BiArrowBack style={{ marginTop: -2 }} />
           Kembali
         </Link>
       </div>
@@ -55,8 +59,6 @@ const Chart = ({ chart, setChart, userLogin, history, setHistory }) => {
     setChart(chart.filter((ch, index) => ch.random_id !== id));
   };
 
-  console.log(chart);
-
   // ** Mencari tanggal saati ini
   const tanggalSekarang = new Date().toDateString();
 
@@ -64,10 +66,11 @@ const Chart = ({ chart, setChart, userLogin, history, setHistory }) => {
   const manimpulasiData = cariKeranjangUser.map((data) => ({
     ...data,
     tanggal_pembelian: tanggalSekarang,
+    rating: "",
   }));
 
-  // ** Function untuk mengirimkan data pesanan ke history
-  const handleNavigate = () => {
+  // ** Function untuk checkout
+  const handleCheckout = () => {
     Swal.fire({
       title: "Berhasil Checkout",
       background: "#1E1E1E",
@@ -87,11 +90,12 @@ const Chart = ({ chart, setChart, userLogin, history, setHistory }) => {
   return (
     <div className="container-chart">
       <Link to="/" className="btn-back-chart">
+        <BiArrowBack style={{ marginTop: -2 }} />
         Kembali
       </Link>
 
       <div className="sub-container-chart">
-        {cariKeranjangUser?.map((ch, idx) => (
+        {cariKeranjangUser?.map((ch) => (
           <div key={ch.random_id} className="container-main-chart">
             <div className="sub-main-chart">
               <img
@@ -138,7 +142,9 @@ const Chart = ({ chart, setChart, userLogin, history, setHistory }) => {
                       if (c.random_id === ch.random_id) {
                         return {
                           ...c,
+                          // eslint-disable-next-line
                           ["jumlah"]: c.jumlah === 1 ? 1 : c.jumlah - 1,
+                          // eslint-disable-next-line
                           ["total"]:
                             c.harga * (c.jumlah === 1 ? 1 : c.jumlah - 1),
                         };
@@ -168,7 +174,9 @@ const Chart = ({ chart, setChart, userLogin, history, setHistory }) => {
                       if (c.random_id === ch.random_id) {
                         return {
                           ...c,
+                          // eslint-disable-next-line
                           ["jumlah"]: c.jumlah + 1,
+                          // eslint-disable-next-line
                           ["total"]: c.harga * (c.jumlah + 1),
                         };
                       } else {
@@ -199,7 +207,7 @@ const Chart = ({ chart, setChart, userLogin, history, setHistory }) => {
               : totalJumlah
           )}
         </h1>
-        <button onClick={handleNavigate} className="btn-checkout">
+        <button onClick={handleCheckout} className="btn-checkout">
           Checkout
         </button>
       </div>
