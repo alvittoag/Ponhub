@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 
 // ** Import Icons
 import { BiArrowBack } from "react-icons/bi";
+import { BsTrash3 } from "react-icons/bs";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 // ** Import CSS
 import "./chart.css";
@@ -56,7 +58,7 @@ const Chart = ({ chart, setChart, userLogin, history, setHistory }) => {
       color: "#FFFFFF",
     });
 
-    setChart(chart.filter((ch, index) => ch.random_id !== id));
+    setChart(chart.filter((ch) => ch.random_id !== id));
   };
 
   // ** Mencari tanggal saati ini
@@ -130,7 +132,7 @@ const Chart = ({ chart, setChart, userLogin, history, setHistory }) => {
                 onClick={() => handleDelete(ch.random_id)}
                 style={{ marginRight: 20, cursor: "pointer" }}
               >
-                Hapus
+                <BsTrash3 style={{ fontSize: 27 }} />
               </h3>
 
               <h5
@@ -156,7 +158,7 @@ const Chart = ({ chart, setChart, userLogin, history, setHistory }) => {
                 }
                 className="count-chart"
               >
-                -
+                <AiOutlineMinus />
               </h5>
 
               <input
@@ -187,7 +189,7 @@ const Chart = ({ chart, setChart, userLogin, history, setHistory }) => {
                 }
                 className="count-chart"
               >
-                +
+                <AiOutlinePlus />
               </h5>
             </div>
           </div>
